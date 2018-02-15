@@ -8,17 +8,18 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends Controller
 {
+    /**
+     * @Route("/", name="index")
+     */
     public function index(){
-        $number = mt_rand(0, 100);
 
         $navigation = [['caption' => 'home', 'href' => '/']];
 
         return $this->render('index.html.twig', array(
-            'number' => $number,
             'navigation' => $navigation,
         ));
     }

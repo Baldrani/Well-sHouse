@@ -9,15 +9,15 @@
         {% endblock %}
     </head>
     <body>
-        {% block navigation %}
-            <ul id="navigation">
-                {% for item in navigation %}
-                    <li><a href="{{ item.href }}">{{ item.caption|upper }}</a></li>
-                {% endfor %}
-            </ul>
-        {% endblock %}
-        {% block body %}{% endblock %}
+        <div class="ui container" id="app">
+            {% include 'navbar.html.twig' %}
+            {% block body %}{% endblock %}
+        </div>
         {% block javascripts %}
+            <script
+                    src="https://code.jquery.com/jquery-3.1.1.min.js"
+                    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+                    crossorigin="anonymous"></script>
             <script src="/public/semantic/semantic.min.js"></script>
             <script src="{{ asset('build/app.js') }}"></script>
         {% endblock %}
