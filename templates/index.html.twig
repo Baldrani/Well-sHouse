@@ -1,5 +1,64 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <home-first-part></home-first-part>
+    <div class="landing-img">
+        <div  class="ui container">
+            <div class="block-home">
+                <h1 class="ui header">WELL HOUSE</h1>
+                <p>Entrez dans mon monde !</p>
+            </div>
+        </div>
+    </div>
+    <div class="ui container">
+        <h1 class="ui header aligned center">Mes spécialités</h1>
+        <div class="ui three column divided grid ">
+            <div class="row">
+                <div class="column">
+                    <h2>Test</h2>
+                    <p>Content</p>
+                </div>
+                <div class="column">
+                    <h2>Test</h2>
+                    <p>Content</p>
+                </div>
+                <div class="column">
+                    <h2>Test</h2>
+                    <p>Content</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <h2>Test</h2>
+                    <p>Content</p>
+                </div>
+                <div class="column">
+                    <h2>Test</h2>
+                    <p>Content</p>
+                </div>
+                <div class="column">
+                    <h2>Test</h2>
+                    <p>Content</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block specificStyle %}
+    <style>
+        .landing-img {
+            background-image: url("{{ asset('build/images/backgroundHome.353a3786.jpeg') }}");
+            height: 100vh;
+            width: 100%;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .block-home{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 {% endblock %}

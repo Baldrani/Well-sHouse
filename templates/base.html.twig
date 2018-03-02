@@ -7,9 +7,10 @@
             <link rel="stylesheet" href="/public/semantic/semantic.min.css">
             <link rel="stylesheet" href="{{ asset('build/app.css') }}">
         {% endblock %}
+        {% block specificStyle %}{% endblock %}
     </head>
     <body>
-        <div class="ui container" id="app">
+        <div id="app">
             {% include 'navbar.html.twig' %}
             {% block body %}{% endblock %}
         </div>

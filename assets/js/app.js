@@ -1,4 +1,5 @@
-require('../css/app.scss');
+require('../css/app.sass');
+require('../images/backgroundHome.jpeg');
 
 import jQuery from "jquery";
 window.$ = window.jQuery = jQuery;

@@ -29,8 +29,7 @@ Encore
 // .enableVersioning()
 
     // enable Vue
-    .enableVueLoader()
-;
+    .enableVueLoader();
 
 // export the final configuration
 module.exports = Encore.getWebpackConfig();
